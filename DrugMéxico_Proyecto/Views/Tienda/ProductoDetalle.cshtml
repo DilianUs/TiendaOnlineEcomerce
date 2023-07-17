@@ -1,0 +1,179 @@
+﻿
+
+@{
+    ViewData["Title"] = "Shop";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="ps-page--product">
+       <div class="ps-container">
+            <div class="ps-page__container">
+                <div class="ps-page__left">
+                    <div class="ps-product--detail ps-product--fullwidth">
+                         <div class="ps-product__header">
+                             <div class="ps-product__thumbnail" data-vertical="true">
+                                 <figure>
+                                     <div class="ps-wrapper">
+                                         <div class="ps-product__gallery" data-arrow="true">
+                                        <div class="item"><a href="~/img/Demo/DEMO9.png"><img src="~/img/Demo/DEMO9.png" alt=""></a></div>
+                                         </div>
+                                    </div>
+                                 </figure>
+
+                             </div>
+                             <div class="ps-product__info">
+                          
+                                
+                                <div class="ps-product__meta">
+                                     <p>Marca: <a href="#">Marca</a></p> 
+                                     <br>
+                                 </div>
+                                 
+                                 <div class="ps-product__meta">
+                                        <p>Marca: Nombre l producto</p>
+                                        <br>
+                                 </div>
+                                <h4 class="ps-product__price">Precio rebajado – Precio normal</h4>
+                                <div class="ps-product__desc">
+                                    <p>Vendido por:<a href="#"><strong> Marca</strong></a></p>
+                                    <ul class="ps-list--dot">
+                                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem.</li>
+                                </ul>
+                                </div>
+                                <div class="ps-product__shopping">
+
+                                     <figure>
+                                         <figcaption>Cantidad</figcaption>
+                                         <div class="form-group--number">
+                                            <button class="up"><i class="fa fa-plus"></i></button>
+                                            <button class="down"><i class="fa fa-minus"></i></button>
+                                             <input name="cantidadProducto" class="form-control" type="text" placeholder="1" value="0">
+                                         </div>
+                                         
+                                     </figure>
+                                <form asp-controller="Usuario" asp-action="Carrito" class="boton-carrito-cont">
+                                    <input id="cantidad-produncto-enviar" name="cantidadProducto" class="form-control" type="hidden" placeholder="1" value="0">
+                                    <input type="hidden" name="id" value="3" />
+                                             <button type="submit" class="ps-btn" style="padding-bottom: 3px;">Agregar a carrito</button>
+                                             
+                                     </form>
+                               
+                                <a class="ps-btn" asp-controller="Tienda" asp-action="Checkout" asp-route-id="id">Comprar Ahora</a>  
+                                    
+                                 </div>
+                                <div class="ps-product__specification">
+                                     <a class="report" href="#">Reportar</a>
+                                     <p><strong>LOREM :</strong> LOREM </p>
+                                     <p class="categories"><strong> Categoria:</strong><a href="#">Categoria</a></p>
+                                 </div>
+                                <div class="ps-product__sharing"><a class="facebook" href="#"><i class="fa fa-facebook"></i></a><a class="twitter" href="#"><i class="fa fa-twitter"></i></a><a class="google" href="#"><i class="fa fa-google-plus"></i></a><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></div>
+                        
+                             </div>
+                         </div>
+                          <div class="ps-product__content ps-tab-root">
+                                <ul class="ps-tab-list">
+                                     <li class="active"><a href="#tab-1">Descripcion</a></li>
+                                </ul>
+                                <div class="ps-tabs">
+                                     <div class="ps-tab active" id="tab-1">
+                                         <div class="ps-document">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                         </div>
+                                     </div>
+                                </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="ps-page__right">
+                     <aside class="widget widget_product widget_features">
+                        <p><i class="icon-network"></i> Recibe de 2 a 4 días hábiles en toda la República Mexicana</p>
+                        <p><i class="icon-3d-rotate"></i> Todas tus marcas de confianza</p>
+                        <p><i class="icon-credit-card"></i> Pago seguro</p>
+                    </aside>
+                     <aside class="widget widget_ads"><a href="#"><img src="~/img/Demo/DEMO9.png" alt=""></a></aside>
+                     <aside class="widget widget_same-brand">
+                         <h3>Misma marca</h3>
+                         <div class="widget__content">
+                        <div class="ps-product">
+                            <div class="ps-product__thumbnail">
+                                <a href="#"><img src="~/img/Demo/DEMO9.png" alt="" /></a>
+                                <div class="ps-product__badge">-27%</div>
+                                <ul class="ps-product__actions">
+                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Agregar carrito"><i class="icon-bag2"></i></a></li>
+                                    <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Agregar a la Whishlist"><i class="icon-heart"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compara"><i class="icon-chart-bars"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="ps-product__container">
+                                <a class="ps-product__vendor" href="#">Tienda de Robert</a>
+                                <div class="ps-product__content">
+                                    <a class="ps-product__title" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, autem?</a>
+                                    <div class="ps-product__rating">
+                                        <select class="ps-rating" data-read-only="true">
+                                            <option value="1">1</option>
+                                            <option value="1">2</option>
+                                            <option value="1">3</option>
+                                            <option value="1">4</option>
+                                            <option value="2">5</option>
+                                        </select><span>01</span>
+                                        
+                                    </div>
+                                    <p class="ps-product__price sale">$100.99 <del>$401.00 </del></p>
+                                </div>
+                                <div class="ps-product__content hover">
+                                    <a class="ps-product__title" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, consectetur.</a>
+                                    <p class="ps-product__price sale">$320.99 <del>$410.00 </del></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     </aside>
+                </div>
+             </div>
+
+            <div class="ps-section--default">
+                  <div class="ps-section__header">
+                    <h3>Productos Relacionados</h3>
+                  </div>
+                  <div class="ps-section__content">
+                        <div class="ps-carousel--nav owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="10000" data-owl-gap="30" data-owl-nav="true" data-owl-dots="true" data-owl-item="6" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-item-xl="5" data-owl-duration="1000" data-owl-mousedrag="on">
+                             <div class="ps-product" style="width: 300px;">
+                                 <div class="ps-product__thumbnail>
+                                     <a href="#"><img src="~/img/Demo/DEMO7.png" height="150px"  alt=""  /></a>
+                                     <ul class="ps-product__actions">
+                                         <li><a href="#" data-toggle="tooltip" data-placement="top" title="Agregar al carrito"><i class="icon-bag2"></i></a></li>
+                                         <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Agregar a la Whishlist"><i class="icon-heart"></i></a></li>
+                                          <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compara"><i class="icon-chart-bars"></i></a></li>
+                                     </ul>
+                                 </div>
+                                 <div class="ps-product__container">
+                                     <a class="ps-product__vendor" href="#">Tienda de Alex</a>
+                                     <div class="ps-product__content">
+                                        <a class="ps-product__title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, expedita.</a>
+                                         <div class="ps-product__rating">
+                                            <select class="ps-rating" data-read-only="true">
+                                                 <option value="1">1</option>
+                                                 <option value="1">2</option>
+                                                 <option value="1">3</option>
+                                                    <option value="1">4</option>
+                                                    <option value="2">5</option>
+                                             </select><span>01</span>
+                                         </div>
+                                         <p class="ps-product__price">$130.50</p>
+                                     </div>
+                                     <div class="ps-product__content hover">
+                                         <a class="ps-product__title" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolore?</a>
+                                         <p class="ps-product__price">$130.50</p>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                   </div>
+             </div>
+       </div>
+</div>
+  

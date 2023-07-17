@@ -1,0 +1,88 @@
+﻿.preguntas-content ul{
+    list-style:none;
+}
+.preguntas-content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #fff;
+}
+
+.section-preguntas {
+    padding:0 15px;
+}
+
+.list-preguntas-container {
+   
+    padding:10px;
+}
+
+/*dropdown*/
+
+.dropdown-link {
+    display:flex;
+    position:relative; 
+    align-items:center;
+    gap:1rem;
+    
+}
+
+
+.dropdown-list:has( :checked ) {
+    --rows: 1fr;
+    --view: auto;
+    transition: .3s height, .3s grid-template-rows;
+}
+
+.pregunta-container {
+    margin: 0 auto;
+    display: grid;
+    padding:15px 20px;
+    font-weight:700;
+    line-height:1;
+    background-color:#F1F1F1;
+}
+
+.dorp-icon {
+    position:absolute;
+    
+    padding:0 5px;
+}
+
+.dropdown-span {
+
+    position: relative;
+    padding: 0 25px;
+    text-align:left;
+    font-size:19px;
+    font-weight:600;
+}
+
+.dropdown-check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    height: var(--view, 0);
+    transition: .5s height, .5s grid-template-rows;
+}
+
+.dropdown-content p{
+    overflow:hidden;
+    margin-bottom:1.7em;
+    text-align:left;
+    font-size:14px;
+    width:100%;
+    text-align:justify;
+    transition-property: height,grid-template-rows;
+    transition-duration: 1s;
+}
+
+
+/*prueba defs actualizacion*/

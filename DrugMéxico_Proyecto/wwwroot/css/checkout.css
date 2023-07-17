@@ -1,0 +1,373 @@
+﻿.site-content {
+    padding-bottom:90px;
+}
+
+.container-body-section {
+    padding-left:0;
+    padding-right:0;
+    width:1170px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.checkout-title {
+    padding-top:115px;
+    padding-bottom:25px;
+    font-size:48px;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:0;
+}
+
+.content-container-primary {
+    padding-top:90px;
+    padding-right:15px;
+    padding-left:15px;
+    width:100%;
+}
+
+.product-wrapper {
+    padding:0 15px;
+
+   
+}
+.wrapper-box {
+    background-color: #f7f6f7;
+    padding: 1em 2em 1em 3.5em;
+    margin: 0 0 2em;
+    border-top: 3px solid #8fae1b;
+    width:auto;
+    word-wrap:break-word;
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.wrapper-box a {
+   color: white; 
+}
+
+.button-ver-carrito {
+    height: 40px;
+    line-height: 39px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background-color: #0066cc;
+    position: relative;
+    overflow: visible;
+    left: auto;
+    float: right;
+    display: inline-block;
+}
+
+.product-coupon {
+    width:100%;
+    padding:0 15px;
+
+}
+
+.coupon-toggle {
+       background-color: #f1f1f1; 
+}
+
+.coupon-toggle-box {
+    font-size: 14px;
+    padding: 20px 25px 20px 65px;
+    margin-bottom: 2em;
+    width: auto;
+    word-wrap: break-word;
+   
+}
+
+.coupon-toggle-box a{
+    color:#0099cc;
+
+}
+
+.coupon-toggle-form {
+    border:1px solid #d3ced2;
+    padding:20px;
+    margin:2em auto;
+    text-align:left;
+}
+
+.title-tog {
+    margin-bottom: 1.7em;
+    text-align:left;
+    font-size:14px;
+}
+
+.input-tog {
+    margin: 0 0 6px;
+    padding:3px;
+}
+
+.input-tog input{
+    width:100%;
+    line-height:normal;
+    border: 1px solid #ccc;
+    padding:16px;
+}
+
+.button-tog {
+    margin: 0 0 6px;
+    padding:3px;
+}
+
+.button-tog button{
+    background-color:#0071df;
+    height:50px;
+    padding:0 25px;
+    font-size:16px;
+    font-weight:600;
+    text-align:center;
+    border:none;
+    color:#fff;
+}
+
+/*detalles de facturacion*/
+
+.site-checkout {
+    position:relative;
+}
+
+.form-pagos {
+    margin-top: 30px;
+}
+
+.form-pagos {
+   
+}
+
+.form-pagos-content {
+     display:flex;
+     flex-direction:row;
+}
+
+.detalles-facturacion-container {
+    position:relative;
+    width: 58%;
+    
+    padding:0 15px;
+    
+}
+
+.datos-cliente h3{
+    font-size:20px;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+.form-field {
+    margin:0 0 6px;
+    padding: 3px;
+    font-size:14px;
+    word-wrap:break-word;
+    display:flex;
+    flex-direction:column;
+}
+
+.input-text {
+    width:100%;
+    line-height:normal;
+    border:1px solid #ccc;
+    padding:16px;
+}
+
+.checkbox-enviar {
+    margin-top:40px;
+}
+
+.diferente-direccion {
+    margin-bottom:30px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.diferente-direccion span {
+    font-size:14px;
+}
+
+
+.notas-pedido-field {
+    margin: 0 0 6px;
+    padding:3px;
+}
+
+.order-coments {
+    margin-bottom:5px;
+    line-height:2;
+    font-size:14px;
+}
+
+.order-comments-area {
+    border:1px solid #ccc;
+    padding:16px;
+    height:4em;
+    line-height:1.5;
+
+}
+
+.pedido-container {
+    width: 42%;
+    padding: 0 15px;
+}
+
+.detalles-pedido {
+    border: 1px solid #bfbfbf;
+    background-color: #f6f6f6;
+}
+
+.tabla-pedido-fix {
+    padding: 25px;
+    max-width: 100%;
+}
+
+.tabla-pedido  {
+  width:100%;
+
+}
+
+#tabla-pedido-productos {
+    width:100%;
+    max-width: 100%;
+    border-bottom: none;
+  
+}
+
+
+
+
+
+
+.producto-pedido {
+    display:table-row;
+    flex-direction:row;
+    max-width:100%;
+ 
+}
+
+.nombre-producto {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    font-weight:400;
+    text-align:left;
+    padding-top:20px;
+    padding-bottom:5px;
+}
+
+.nombre-producto p {
+   
+    font-size: 14px;
+    
+}
+
+.subtotal {
+    text-align: right;
+}
+
+.precio {
+    display:none;
+}
+.label-container {
+    padding:25px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.paymen-methods {
+    text-align:left;
+    list-style:none outside;
+    border-top:none;
+    
+    padding:25px;
+
+}
+
+.payment-card-data{
+    padding:1em;
+    margin:1em 0;
+}
+
+.card-data h3{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.titular, .card, .expiracion, .cvv {
+    margin: 0 0 6px;
+    padding:3px;
+
+}
+
+.titular, .expiracion, .cvv,.card-num {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-clip: border-box;
+    
+}
+
+ 
+
+.logo-openpay img{
+    width:80px;
+    height:auto;
+    vertical-align: middle;
+    margin: -2px 0 0 0.5em;
+    max-height:2.618em;
+}
+
+.seguridad img {
+    max-height: 3em;
+    margin: -2px 0 0 0.5em;
+    vertical-align: middle;
+}
+
+.expiracion {
+    display:flex;
+    flex-direction:row;
+}
+
+#expiracion-cardM, #expiracion-cardY {
+    max-width:20%;
+    margin-right:5px;
+    margin-left:5px;
+}
+
+.button-box {
+    width:100%;
+    margin:0 0 6px;
+    margin-top:20px;
+    padding:3px;
+}
+
+.button-pagar {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+    transition: all 0.5s;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    background-color: #0071df;
+    color: #fff;
+}

@@ -1,0 +1,123 @@
+﻿ul, li {
+    list-style:none;
+   
+}
+
+   
+
+.SignIn-content {
+    padding-bottom:90px;
+}
+
+.SignIn-title {
+    padding-top: 115px;
+    padding-bottom: 25px;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.SignIn-h1 {
+    font-size: 48px;
+}
+
+.content-position {
+    margin-left:25%;
+    width:50%;
+    
+}
+
+.tabs-nav {
+    text-align:center;
+    margin-bottom:30px;
+    overflow:hidden;
+    display:flex;
+    justify-content:space-between;
+}
+
+.cuenta-option {
+    margin-bottom:7px;
+    color:#999;
+    
+}
+
+.option-text {
+    font-size: 30px; 
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.tabs-content {
+    max-width:430px;
+    margin:0 auto;
+    
+}
+
+.mensaje-error {
+    font-size: 14px;
+    text-align: center;
+}
+
+.tabs-panel {
+    background-color: #fff;
+    padding: 35px 30px 27px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    width: 100%;
+    display:none;
+}
+
+.tabs-panel h2{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 25px;
+}
+
+.form-usuario p {
+    margin-bottom: 12px;
+}
+
+.form-usuario input {
+    padding: 14px 16px;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    color: #000;
+    font-weight: 400;
+    width: 100%;
+    line-height: normal;
+    word-wrap: break-word;
+    font-size:16px;
+}
+
+.check-password-cont {
+    display:flex;
+    font-size:14px;
+    align-items: center;
+   
+}
+.check-password-cont p{
+   margin-bottom:0;
+    font-size: 14px;
+}
+
+#show-password {
+    font-size:18px;
+    width:auto;
+    margin-left:30px;
+}
+/*Activate styles*/
+.sesion-active {
+    display: block;
+}
+
+.active a {
+    color:#000; 
+}
+
+.cuenta-active {
+    display: block;
+  
+}

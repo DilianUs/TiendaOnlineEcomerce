@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Compras Urgentes";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="cotizaciones">
+    <div class="cotizaciones-container">
+        <div class="section-header">
+            <div class="section-header-content">
+                <ul class="section-header-list">
+                    <li class="section-header-item">
+                        <a class="home-link">
+                            Home
+                        </a>
+                    </li>
+                    <span class="sepparation">/</span>
+                    <li class="section-header-item">
+                        <a class="here-link">
+                            @ViewData["Title"]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-banner">
+            <div class="section-banner-container">
+                <div class="section-banner-position">
+                    <div class="section-banner  banner-cotizacion">
+                         <div class="section-banner-text">
+                             <div class="heading-text">¿Necesitas un producto?</div>
+                            <div class="description-text"><h4>¡Te ayudamos!</h4></div>
+                            <div class="banner-button"> Contacto</div>
+                        </div>              
+                    </div>
+
+                </div> 
+            </div>
+        </div>
+        <div class="cotizaciones-content">
+            <div class="section-content-container">
+                <div class="section-hola sd-section">
+                    <div class="section-hola-content">
+                        <div class="section-subtitle">
+                            <h2 class="hola-title">
+                                Hola,
+                                <br>
+                                Te yudamos!
+                            </h2>
+                        </div>
+                        <div class="section-text">
+                            <p class="hola-text">
+                                <br>
+
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. 
+                            
+                                <br>
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. 
+                            
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-contactanos sd-section">
+                    <div class="section-contactanos-content">
+                        <div class="section-subtitle contactanos-title">
+                            <h2 >¡Contáctanos!</h2>
+                        </div>
+                        <div class="section-text contactanos-text">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, ex tenetur velit eius tempora fugit recusandae? Veritatis tempore quasi commodi saepe esse! Blanditiis exercitationem asperiores nulla tempora, quisquam incidunt similique ex, aliquid officia magnam repudiandae possimus dolorem quam quidem eligendi..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-contacto sd-section">
+                    <div class="section-contacto-content">
+                        <div class="tell-cont">
+                            <h3>TELÉFONO</h3>
+                            <p>(+52) 456 655 4567</p>
+                        </div>
+                        <div class="whats-cont">
+                            <h3>WHATSAPP</h3>
+                            <p>(+52) 533 465 5747</p>
+                        </div>
+                        <div class="email-cont">
+                            <h3>EMAIL</h3>
+                            <p>ventas@igrtec.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-formulario ">
+                    <div class="section-formulario-content sd-section">
+                        <div class="section-subtitle section-subtitle-form">
+                            <h2>¡Buscamos tu producto!</h2>
+                        </div>
+                        <div class="formulario-container">
+                            <form>
+                                <div class="form-box">
+                                    <div class="form-item">
+                                          <input type="text" name="nombre" placeholder="Tu nombre*" />  
+                                    </div>
+                                    <div class="form-item">
+                                          <textarea name="descripcion" placeholder="Nombre del producto a localizar(incluye toda la informacion que tengas)*"></textarea>  
+                                    </div>
+                                    <div class="form-item">
+                                          <input type="number" name="piezas" placeholder="Numero de piezas requeridas *" />  
+                                    </div>
+                                    <div class="form-item">
+                                           <input type="email" name="email" placeholder="Email *" /> 
+                                    </div>
+                                    <div class="form-item">
+                                         <input type="text" name="whatsapp" placeholder="Whatsapp *" />   
+                                    </div> 
+                                </div>
+                                <div class="form-button">
+                                    <button type="submit">Enviar Solicitud</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

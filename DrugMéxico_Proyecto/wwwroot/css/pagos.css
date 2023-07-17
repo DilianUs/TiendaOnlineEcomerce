@@ -1,0 +1,36 @@
+﻿.pagos {
+    padding-top:90px;
+    padding-bottom:90px;
+}
+
+.pagos-container {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.textos-pagos p {
+   font-size:14px; 
+}
+
+.table-pago {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+
+.table-pago th, .table-pago td{
+      border: 1px solid black;
+  padding: 8px;
+
+}
+
+.table-pago th{
+   font-weight:600;   
+
+}

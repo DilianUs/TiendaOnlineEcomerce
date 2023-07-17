@@ -1,0 +1,297 @@
+﻿@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+
+<section class="site-checkout" onload="obtenerSesion()">
+    <div class="section-header">
+        <div class="section-header-content">
+            <ul class="section-header-list">
+                <li class="section-header-item">
+                    <a class="home-link">
+                        Home
+                    </a>
+                </li>
+                <span class="sepparation">/</span>
+                <li class="section-header-item">
+                    <a class="here-link">
+                        @ViewData["Title"]
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="site-content">
+        <div class="container-body-section">
+            <div class="content-container">
+                <div class="checkout-title">
+                    <h1 class="checkout-h1">Checkout</h1>
+                </div>
+                <div class="content-container-primary">
+                    <div class="product-wrapper">
+                        <div class="wrapper-box">
+                            <p class="product-name-to-buy">Nombre producto</p>
+                            <a class="button-ver-carrito">Ver carrito</a>
+                        </div>
+                    </div>
+                    <div class="product-coupon">
+                        <div class="coupon-toggle">
+                            <div class="coupon-toggle-box">
+                                <p> ¿Tienes un cupon? <a>Haga clic aqui para ingresar su código</a> </p>
+                            </div>
+                        </div>
+                        <form class="coupon-toggle-form">
+                            <p class="title-tog">Si tienes un cupon, ingresalo abajo.</p>
+                            <p class="input-tog"><input type="text" name="coupon-code" class="input-text" placeholder="Código de cupón"/></p>
+                            <p class="button-tog"><button type="submit" name="spply-coupon" class="button.apply">Aplicar cupón</button></p>
+                        </form>
+                    </div>
+                    <div class="shop-form-container">
+                        <form class="form-pagos" asp-controller="Tienda" asp-action="Checkout" id="check-out-form">
+                            <div class="form-pagos-content">
+                                <div class="detalles-facturacion-container">
+                                    <div class="detalles-cliente">
+                                        <div class="datos-cliente">
+                                            <h3>Detalles de facturacion</h3>
+                                            <div class="form-fields-container">
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Nombre <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" required placeholder="Nombre" name="name" /> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Apellidos<abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" required placeholder="Apellidos" name="lastName" /> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Nombre de la empresa (opcional) <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" placeholder="Nombre de la empresa" /> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">País / Regíon <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" placeholder="País / Regíon" name="pais"/> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Direccion de la calle <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" placeholder="Direccion" name="direccion"/> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Apartamento, habitacion, etc. (opcional) <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" placeholder="Apartamento, habitacion, etc. (opcional)" name="apartamento"/> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Poblacion <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" placeholder="Poblacion" name="poblacion"/> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Regíon / Provincia <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" placeholder="Regíon / Provincia" name="provincia"/> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Codigo Postal <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="text" class="input-text" required placeholder="Codigo Postal" name="codigoPostal" /> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Teléfono <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="tel" class="input-text" required placeholder="Teléfono" name="telefono" id="phone"/> </span>
+                                                </p>
+                                                <p class="form-field">
+                                                    <label class="last-name-field">Dirección de correo electrónico  <abbr class="required" title="obligatorio"></abbr></label>
+                                                    <span class="field-form-input"> <input type="email" class="input-text" required placeholder="Dirección de correo electrónico " name="email" id="email"/> </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="notas-pedido">
+                                            <div class="checkbox-enviar">
+                                                <h3 class="diferente-direccion">
+                                                    <input type="checkbox"/>
+                                                    <span>¿Enviar a una dirección diferente?</span>
+                                                </h3>
+                                            </div>
+                                            <div class="notas-pedido-field">
+                                                <p class="form-notes">
+                                                    <label class="order-coments">Notas del pedido (opcional)</label>
+                                                    <span class="coments-field">
+                                                        <textarea class="order-comments-area"></textarea>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pedido-container">
+                                    <h3 class="titulo-pedido">Su pedido</h3>
+                                    <div class="detalles-pedido">
+                                        <div class="tabla-pedido">
+                                            <div class="tabla-pedido-fix">
+                                                <table id="tabla-pedido-productos">
+                                                    <thead id="thproductos">
+                                                        <tr>
+                                                            <th>Producto</th>
+                                                            <th>Subtotal</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @*aqui van todos los productos a comprar*@
+                                                        <tr class="producto-pedido">
+                                                            <td class="nombre-producto"><div>Nombre producto</div><p>x</p> <p class="cantidad">2</p> <p class="precio">32</p> </td>
+                                                            <td class="subtotal">222</td>
+                                                        </tr>
+                                                        <tr class="producto-pedido">
+                                                            <td class="nombre-producto">Producto<p>x</p> <p class="cantidad">3</p> <p class="precio">23</p> </td>
+                                                            <td class="subtotal">222</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Subtotal</th>
+                                                            <th id="subtotal-suma"></th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                           
+
+                                        </div>
+                                        <div class="Costo-envio-container">
+
+                                        </div>
+                                        <div class="Total-compra-container">
+                                            <div class="label-container">
+                                                <p class="label-total">Total</p>
+                                            </div>
+                                            <div class="amount-container">
+                                                <p id="total-compra-amount"></p>
+                                            </div>
+                                        </div>
+                                        <div class="paymen">
+                                            <ul class="paymen-methods">
+                                                <li class="banc-transfer">
+                                                    <input type="radio" class="banca-transfer-check" id="banca-transfer-check" name="opcion" value="transfer" />
+                                                    <label for="banca-transfer-check">Transferencia bancaria directa</label>
+                                                    <div class="payment-box">
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sunt, aspernatur perferendis animi corporis vitae, provident dolore impedit repudiandae, dolorum at. Sequi quisquam, praesentium molestias fugit ab alias quibusdam? Veniam nisi accusamus in ex nulla error voluptatum quibusdam ratione nobis.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card-method">
+                                                    <input type="radio" class="card-method-check" id="card-method-check" name="opcion" value="card" checked />
+                                                    <label for="banca-transfer-check">Pago con tarjeta de crédito o débito</label>
+                                                    <div class="payment-card-data">
+                                                        <div class="card-data">
+                                                            <div class="cards-header">
+                                                                <div>
+                                                                    <h5>Tarjetas de credito</h5>
+                                                                    <img src="/img/Demo/DEMO9.png" />
+                                                                </div>
+                                                                <div>
+                                                                    <h5>Tarjetas de debito</h5>
+                                                                    <img src="/img/Demo/DEMO9.png" />
+                                                                </div>
+                                                            </div>
+                                                            <h3>Informacion de pago</h3>
+                                                            <div>Nueva tarjeta</div>
+                                                            <div class="cadr-information">
+                                                                <div class="titular">
+                                                                    <label for="titular-name">Nombre del titular</label>
+                                                                    <input type="text" id="titular-name"  placeholder="Nombre del tarjetahambiente" name="titular" />
+                                                                </div>
+                                                                <div class="card-num">
+                                                                    <label for="card-number" >Numero de tarjeta</label>
+                                                                    <input type="text" id="card-number"  placeholder="**** **** **** ****" name="numCard" />
+                                                                </div>
+                                                                <div class="expiracion">
+                                                                    <label for="expiracion-card">Expiracion (MM/AA)</label>
+                                                                    <input type="text" id="expiracion-cardM" placeholder="MM" name="expiracionM" /><input type="text" id="expiracion-cardY" placeholder="AA" name="expiracionY" />
+                                                                </div>
+                                                                <div class="cvv">
+                                                                    <label for="cvv-card">CVV</label>
+                                                                    <input type="text" id="cvv-card"  placeholder="CVC" name="cvv" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="openpay-img">
+                                                                <div class="logo-openpay">
+                                                                    <img  src="https://img.openpay.mx/plugins/openpay_logo.svg"  />
+                                                                </div>
+                                                                <div class="seguridad">
+                                                                    <img src="/img/Demo/DEMO9.png" />
+                                                                    <p>Tus pagos se realizan de forma segura con encriptación de 256 bits</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <button type="submit" class="button-pagar" onclick="imprimir"> Realizar pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*<div id="webview">
+
+</div>*@
+
+<script>
+    //calculo compra
+   
+    const productos = document.querySelectorAll(".producto-pedido");
+
+    for (let i = 0; i < productos.length; i++) {
+        const cantidad = parseInt(productos[i].querySelector(".cantidad").textContent);
+        const precio = parseFloat(productos[i].querySelector(".precio").textContent.replace(",", "."));
+        const subtotal = cantidad * precio;
+        productos[i].querySelector(".subtotal").textContent = subtotal.toFixed(2);
+
+        console.log(cantidad +" " + precio+""+subtotal);
+    }
+    const subtotales = document.querySelectorAll(".subtotal");
+    var total_subtotales=0;
+    for (let i = 0; i < subtotales.length; i++) {
+        total_subtotales+= parseInt(subtotales[i].textContent);
+    }
+    const totalDoc = document.querySelector("#subtotal-suma");
+    totalDoc.textContent = total_subtotales;
+
+    //tipo de pago
+    const opcion1 = document.querySelector('input[value="transfer"]');
+    const opcion2 = document.querySelector('input[value="card"]');
+    const datosTarjeta = document.querySelector(".payment-card-data");
+    var button = document.getElementById("myButton");
+    opcion1.addEventListener('change', () => {
+        console.log('Se ha seleccionado la transferencia');
+        datosTarjeta.style.display = "none";
+        
+    });
+
+    opcion2.addEventListener('change', () => {
+        console.log('Se ha seleccionado pago con tarjeta');
+        datosTarjeta.style.display = "block";
+       
+    });
+
+
+
+    //comprobar tarjeta
+    const titular = document.getElementById('titular-name');
+    const numero = document.getElementById('card-number');
+    const expiracion = document.getElementById('expiracion-card');
+    const cvv = document.getElementById('message');
+
+
+
+
+
+</script>

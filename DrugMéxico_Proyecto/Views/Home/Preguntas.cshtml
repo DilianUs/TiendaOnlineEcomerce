@@ -1,0 +1,379 @@
+﻿@{
+    ViewData["Title"] = "Preguntas Frecuentes";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="preguntas">
+    <div class="preguntas-container">
+        <div class="section-header">
+            <div class="section-header-content">
+                <ul class="section-header-list">
+                    <li class="section-header-item">
+                        <a class="home-link">
+                            Home
+                        </a>
+                    </li>
+                    <span class="sepparation">/</span>
+                    <li class="section-header-item">
+                        <a class="here-link">
+                            @ViewData["Title"]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         <div class="preguntas-content">
+             <div class="section-content-container">
+				<div class="section-preguntas sd-section">
+					<div class="list-preguntas-container" name="preguntasContenedor">
+						<ul class="list-preguntas" id="list-preguntas" name="preguntas">
+                            <li class="dropdown-list">
+								<div class="pregunta-container">
+                                  
+                                     <a href="#" class="dropdown-link">
+									    <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Qué es nuestra empresa?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta1" onclick="javascript:seleccionar(id)"  />
+                                     </a>
+
+								</div>
+
+								<div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+								</div>
+							</li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cómo funcionamos?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta2" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.<br>
+                                        <br>
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Qué ventajas hay por comprar aquí?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta3" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cómo puedo comprar productos al mayoreo?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta4" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Que tipos de productos venden ?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta5" onclick="javascript:seleccionar(id)"/>
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Que pasa si no encuentro el producto que busco?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta6" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Qué diferencia hay entre ustede y otro nogocio?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta7" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cómo puedo vender con ustedes?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta8" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Ustedes tiene tiendas físicas?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta9" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Por qué  regala productos en cada pedido?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta10" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cómo comprar aquí?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta11" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+                                        
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cuáles son los Horarios de Servicio y Reparto?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta12" onclick="javascript:seleccionar(id)"/>
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cómo puedo darle seguimiento a mi pedido?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta13" onclick="javascript:seleccionar(id)"/>
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Por qué son mas baratos los Productos en la tienda?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta14" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">Quiero cancelar mi pedido … ¿Qué hago?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta15" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cómo funciona las devoluciones ?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta16" onclick="javascript:seleccionar(id)" />
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="dropdown-list">
+                                <div class="pregunta-container">
+
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-solid fa-plus dorp-icon"></i>
+                                        <i class="fa-solid fa-minus dorp-icon"></i>
+                                        <span class="dropdown-span">¿Cómo contacto con un Representante?</span>
+
+                                        <input type="checkbox" class="dropdown-check" id="pregunta17" onclick="javascript:seleccionar(id)"/>
+                                    </a>
+
+                                </div>
+
+                                <div class="respuesta-container dropdown-content">
+                                    <p class="dropdown-element">
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor massa at eros fringilla, nec faucibus augue tincidunt. Sed at elit sit amet felis scelerisque ultricies sed id neque. Vivamus nec felis suscipit, gravida lectus vel, sollicitudin lorem. Curabitur maximus urna id ligula ultricies, vitae varius ipsum tincidunt. Etiam semper quis enim a commodo. Fusce eleifend, ipsum vel fermentum ultrices, odio risus congue lectus, vel congue lorem nisl vel lorem.
+                                    </p>
+                                </div>
+                            </li>
+						</ul>
+					</div>	
+                 </div>
+             </div>
+         </div>
+    </div> 
+</section>

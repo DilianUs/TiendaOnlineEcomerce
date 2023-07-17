@@ -1,0 +1,177 @@
+﻿@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="carrito">
+    <div class="carrito-container">
+        <div class="section-header">
+            <div class="section-header-content">
+                <ul class="section-header-list">
+                    <li class="section-header-item">
+                        <a class="home-link">
+                            Home
+                        </a>
+                    </li>
+                    <span class="sepparation">/</span>
+                    <li class="section-header-item">
+                        <a class="here-link">
+                            @ViewData["Title"]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="carrito-content">
+        <div class="container-body-section">
+            <div class="content-container">
+                <div class="SignIn-title">
+                    <h1 class="SignIn-h1">@ViewData["Title"]</h1>
+                </div>
+                <div class="content-container-primary">
+                    <div class="content-position-cart">
+                        <div class="productos-eliminados"></div>
+                        <div class="productos-carrito">
+                            
+                                 <div class="tabla-carrito-container"> 
+                                     <table class="cart-table">
+                                        <thead class="cart-table-header">
+                                             <tr >
+                                                 <th>&nbsp;</th>
+                                                <th>PRODUCTO</th>
+                                                <th>PRECIO</th>
+                                                <th>CANTIDAD</th>
+                                                <th>TOTAL</th>
+                                                <th>&nbsp;</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody class="cart-table-body">
+                                          
+                                               
+                                                <tr class="cart-item">
+                                                     <td class="cart-item-img">
+                                                        <a >
+                                                            <img src="~/img/Demo/DEMO9.png" alt="" width="150" height="125" />
+                                                            </a>
+                                                     </td>
+                                                    <td class="cart-item-name">
+                                                        <a >
+                                                            Nombre del producto
+                                                        </a>
+                                                    </td>
+                                                    <td class="cart-item-price">
+                                                        <p>Precio</p>
+                                                    </td>
+                                                    <td class ="cart-item-quantity">
+                                                        <div>
+                                                            <div class="counter">
+                                                                <div class="id-carrito-container">idCarrito</div>
+                                                                <button class="minus-carrito-cant">-</button>
+                                                                <span class="cantidad-productos">7</span>
+                                                                <button class="plus-carrito-cant">+</button>
+                                                            </div>
+                                                            
+                                                            
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart-item-total">
+                                                        <div>
+                                                           Precio
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart-item-delete-btn">
+                                                        <div id="cerrar-promo" class="cerrar-promo"> <span class="close"><i id="cross" class="icon-cross2" onclick=""></i></span></div>
+                                                    </td>
+                                                 </tr>
+                                            <tr class="cart-item">
+                                                <td class="cart-item-img">
+                                                    <a>
+                                                        <img src="~/img/Demo/DEMO9.png" alt="" width="150" height="125" />
+                                                    </a>
+                                                </td>
+                                                <td class="cart-item-name">
+                                                    <a>
+                                                        Nombre del producto
+                                                    </a>
+                                                </td>
+                                                <td class="cart-item-price">
+                                                    <p>Precio</p>
+                                                </td>
+                                                <td class="cart-item-quantity">
+                                                    <div>
+                                                        <div class="counter">
+                                                            <div class="id-carrito-container">idCarrito</div>
+                                                            <button class="minus-carrito-cant">-</button>
+                                                            <span class="cantidad-productos">7</span>
+                                                            <button class="plus-carrito-cant">+</button>
+                                                        </div>
+
+
+                                                    </div>
+                                                </td>
+                                                <td class="cart-item-total">
+                                                    <div>
+                                                        Precio
+
+                                                    </div>
+                                                </td>
+                                                <td class="cart-item-delete-btn">
+                                                    <div id="cerrar-promo" class="cerrar-promo"> <span class="close"><i id="cross" class="icon-cross2" onclick=""></i></span></div>
+                                                </td>
+                                            </tr>
+                                            <tr class="cart-item">
+                                                <td class="cart-item-img">
+                                                    <a>
+                                                        <img src="~/img/Demo/DEMO9.png" alt="" width="150" height="125" />
+                                                    </a>
+                                                </td>
+                                                <td class="cart-item-name">
+                                                    <a>
+                                                        Nombre del producto
+                                                    </a>
+                                                </td>
+                                                <td class="cart-item-price">
+                                                    <p>Precio</p>
+                                                </td>
+                                                <td class="cart-item-quantity">
+                                                    <div>
+                                                        <div class="counter">
+                                                            <div class="id-carrito-container">idCarrito</div>
+                                                            <button class="minus-carrito-cant">-</button>
+                                                            <span class="cantidad-productos">7</span>
+                                                            <button class="plus-carrito-cant">+</button>
+                                                        </div>
+
+
+                                                    </div>
+                                                </td>
+                                                <td class="cart-item-total">
+                                                    <div>
+                                                        Precio
+
+                                                    </div>
+                                                </td>
+                                                <td class="cart-item-delete-btn">
+                                                    <div id="cerrar-promo" class="cerrar-promo"> <span class="close"><i id="cross" class="icon-cross2" onclick=""></i></span></div>
+                                                </td>
+                                            </tr>
+                                             
+                                         </tbody>
+                                     </table>
+                                 </div>
+                              
+                            
+                            
+                           
+                        </div>
+                        <p class="regresar-tienda">
+                            <a class="boton-regresar" asp-controller="Tienda" asp-action="Shop">Volver a la tienda</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

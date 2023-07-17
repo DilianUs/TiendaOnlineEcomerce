@@ -1,0 +1,50 @@
+﻿.img-user {
+    border-radius: 150px;
+}
+
+.container-account {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.primary {
+    padding-left: 15px;
+    padding-right: 15px;
+    display:flex;
+    flex-direction:column;
+}
+
+.hello-user {
+    display:flex;
+    flex-direction:row;
+}
+
+.user-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-account {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section {
+    text-align:center;
+}
+
+.user-icon-hello {
+    margin-bottom:30px;
+}
+
+
+
+.left-sect-acc {
+    width:25%;
+}
+
+.right-sect-acc {
+    width:70%;
+}

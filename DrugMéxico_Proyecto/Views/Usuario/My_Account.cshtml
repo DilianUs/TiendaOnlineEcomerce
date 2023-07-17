@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Mi cuenta";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="account-section">
+    <div class="section-header">
+        <div class="section-header-content">
+            <ul class="section-header-list">
+                <li class="section-header-item">
+                    <a class="home-link">
+                        Home
+                    </a>
+                </li>
+                <span class="sepparation">/</span>
+                <li class="section-header-item">
+                    <a class="here-link">
+                        @ViewData["Title"]
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="container-account">
+        <div class="row-account">
+            <div class="title-section">
+                <h1 class="account-title">
+                    @ViewData["Title"]
+                </h1>
+            </div>
+           <div class="primary">
+               <div class="user-icon-hello">
+                    <div class="hello-user">
+                        
+                        <div class="conteiner">
+                            <img src="/img/Demo/DEMO1.jpg" alt="" height="40px" width="40px" class="rounded-circle">
+                        </div>
+                        
+                        
+                        </div>
+
+                        
+                        <figure>
+                            <p>Hola, usuario</p>
+                            <p><a href="#">@ViewBag.nombre @ViewBag.apellidoPat</a></p>
+                        </figure>
+                    </div>
+               </div>
+               <div class="user-information">
+                    <div class="left-sect-acc">
+                        <div class="accunt-left">
+                            <aside class="ps-widget--account-dashboard">
+
+                                <div class="ps-widget__content">
+                                    <ul>
+                                        <li class="active"><a href="#"><i class="icon-user"></i> ESCRITORIO</a></li>
+                                        <li><a href="#"><i class="icon-alarm-ringing"></i> PEDIDOS</a></li>
+                                        <li><a href="#"><i class="icon-papers"></i> DESCARGAS</a></li>
+                                        <li><a href="#"><i class="icon-map-marker"></i> DIRECCION</a></li>
+                                        <li><a href="#"><i class="icon-store"></i> DETALLES DE LA CUENTA</a></li>
+                                       
+                                        <li><a asp-controller="Usuario" asp-action="SignOut"><i class="icon-power-switch"></i>Cerrar sesion</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="right-sect-acc">
+                        <div class="account-right">
+                            <form class="ps-form--account-setting" action="index.html" method="get">
+                                <div class="ps-form__header">
+                                    <h3>Informacion de usuario</h3>
+                                </div>
+                                <div class="ps-form__content">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input class="form-control" type="text" placeholder="Ingresa tu nombre..." value="@ViewBag.nombre @ViewBag.apellidoPat @ViewBag.apellidoMat ">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Munero de telefono</label>
+                                                <input class="form-control" type="text" placeholder="Ingresa tu numero de telefono...">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input class="form-control" type="text" placeholder="Ingresa tu email..." value="@ViewBag.email">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Edad</label>
+                                                <input class="form-control" type="text" placeholder="Ingresa tu fecha de nacimiento...">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Genero</label>
+                                                <select class="form-control">
+                                                    <option value="1">Hombre</option>
+                                                    <option value="2">Mujer</option>
+                                                    <option value="3">Otro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group submit">
+                                    <button class="ps-btn">Actualizar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+               </div>
+
+           </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,144 @@
+﻿@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+@model DrugMéxico_Proyecto.Models.UserModel
+
+<section class="d-flex align-items-center justify-content-center">
+   
+    <div class="SignIn-container" style="align-items: center;">
+        <div class="section-header">
+            <div class="section-header-content">
+                <ul class="section-header-list">
+                    <li class="section-header-item">
+                        <a class="home-link">
+                            Home
+                        </a>
+                    </li>
+                    <span class="sepparation">/</span>
+                    <li class="section-header-item">
+                        <a class="here-link">
+                            @ViewData["Title"]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="SignIn-content">
+            <div class="container-body-section">
+                <div class="content-container" ">
+                    <div class="SignIn-title">
+                        <h1 class="SignIn-h1">Cuenta</h1>
+                    </div>
+                    <div class="content-container-primary" >
+                        <div class="content-position" >
+                            
+                                <ul class="list-unstyled text-center">
+                                <li class="cuenta-option sesion-text active">
+                                    <a class="option-text custom-link" onclick="activeSesion()">Iniciar Sesión</a>
+                                </li>
+                                <li class="cuenta-option cuenta-text">
+                                    <a class="option-text custom-link" onclick="activeCuenta()">Crear Cuenta</a>
+                                </li>
+                            </ul>
+                            
+                            <div class="tabs-content">
+                                <div> <p class="mensaje-error">@ViewBag.error</p></div>
+                                <div class="tabs-panel-sesion tabs-panel sesion-active" >
+                                    <h2>Inicie sesión con su cuenta</h2>
+                                    <form method="post" asp-action="SignIn" asp-controller="Usuario" class="form-usuario">
+                                        <p>
+                                            <input type="text" required placeholder="Nombre de usuario o correo electronico" autocomplete="username" asp-for="correo"/>
+                                        </p>
+                                        <p>
+                                            <input type="password" required placeholder="Contraseña"  autocomplete="current-password" asp-for="password"/>
+                                        </p>
+                                        <p>
+                                           
+                                            <button type="submit" name="action" value="login">Iniciar Sesión</button>
+                                        </p>
+                                    </form>
+                                </div>
+                                <div class="tabs-panel-cuenta tabs-panel">
+                                    <h2>Crea una cuenta</h2>
+                                    <form method="post" asp-action="SignIn" asp-controller="Usuario" class="form-usuario" id="form-registro">
+                                        <p>
+                                            <input type="text" required placeholder="Nombre" autocomplete="nombre" asp-for="nombre" id="nombre-registro" />
+                                        </p>
+                                        <p>
+                                            <input type="text" required placeholder="Apellido paterno" autocomplete="apPat" asp-for="apPat" id="apPat-registro" />
+                                        </p>
+                                        <p>
+                                            <input type="text" required placeholder="Apellido materno" autocomplete="apMat" asp-for="apMat" id="apMat-registro" />
+                                        </p>
+                                        <p>
+                                            <input type="email" required placeholder="Correo electrónico" autocomplete="email" asp-for="correo" id="email-registro"/>
+                                        </p>
+                                            
+                                         <p>
+                                            <input type="password" required placeholder="Contraseña"  autocomplete="current-password" asp-for="password" id="password-registro"/>
+                                        </p>
+                                        <p>
+                                            <input type="password" required placeholder="Confirmar contraseña" autocomplete="current-password" id="password-confirm-registro" />
+                                        </p>
+                                        <p>
+                                                <div class="check-password-cont">
+                                                    <p>
+                                                        Mostrar contraseña
+                                                    </p>
+
+                                                    <input type="checkbox" id="show-password" onclick="togglePassword()">
+                                                </div>
+                                        </p>
+                                        <p>
+                                       
+                                            <button type="submit" name="action" value="register">Crear Cuenta</button>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const form = document.getElementById('form-registro');
+    const emailInput = document.getElementById('email-registro');
+    const password = document.querySelector("#password-registro");
+    const passwordconfirm = document.querySelector("#password-confirm-registro");
+    form.addEventListener('submit', (event) => {
+        if (!isValidEmail(emailInput.value)) {
+            event.preventDefault();
+            alert('Please enter a valid email address.' + emailInput.value);
+        } else if (password.value != passwordconfirm.value) {
+            event.preventDefault();
+            password.style.borderColor = "#ff9999";
+            password.style.outline = "1px solid #ff9999";
+            passwordconfirm.style.borderColor = "#ff9999";
+            passwordconfirm.style.outline = "1px solid #ff9999";
+        } 
+       
+    });
+
+  function isValidEmail(email) {
+    // Regular expression to validate email format
+    const emailRegex = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+    return emailRegex.test(email);
+  }
+
+    function togglePassword() {
+       
+        var showPasswordCheckbox = document.getElementById("show-password");
+        if (showPasswordCheckbox.checked) {
+            password.type = "text";
+            passwordconfirm.type = "text";
+        } else {
+            password.type = "password";
+            passwordconfirm.type = "password";
+        }
+    }
+</script>

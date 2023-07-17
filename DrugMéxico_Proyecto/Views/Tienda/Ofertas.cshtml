@@ -1,0 +1,120 @@
+
+@{
+    ViewData["Title"] = "Ofertas";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="catalogo-ofertas">
+
+    <div class="catalogo-container m-4">
+        <div class="section-header">
+            <div class="section-header-content">
+                <ul class="section-header-list">
+                    <li class="section-header-item">
+                        <a class="home-link">
+                            Home
+                        </a>
+                    </li>
+                    <span class="sepparation">/</span>
+                    <li class="section-header-item">
+                        <a class="here-link">
+                            Ofertas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ps-page--shop tienda-margin" id="shop-sidebar">
+        <div class="catalogo-content-container">
+            <div class="container">
+                <div class="catalogo-row ps-layout--ofertas">
+
+                    <div class="catalogo-content-area ps-layout__right">
+                        <div class="ps-shopping ps-tab-root">
+                            <div class="ps-shopping__header">
+                                <div class="catalogo-toolbar">
+                                    <p><strong>  </strong>Productos en oferta</p>
+                                    <div class="ps-shopping__actions">
+                                        <select class="ps-select" data-placeholder="Sort Items">
+                                            <option>Sort by latest</option>
+                                            <option>Sort by popularity</option>
+                                            <option>Sort by average rating</option>
+                                            <option>Sort by price: low to high</option>
+                                            <option>Sort by price: high to low</option>
+                                        </select>
+                                        <div class="ps-shopping__view">
+                                            <p>View</p>
+                                            <ul class="ps-tab-list">
+                                                <li class="active"><a href="#tab-1"><i class="icon-grid"></i></a></li>
+                                                <li><a href="#tab-2"><i class="icon-list4"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img src="/img/demos/DEMO1.png" class="card-img-top" alt="Imagen del producto">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Nombre producto</h5>
+                                                <p class="card-text">Descripcion</p>
+                                                <p class="card-price">$1000</p>
+                                                <p class="card-price">$1000</p>
+                                                <p class="card-price">$1000</p>
+                                                <p class="card-price">$1000</p>
+                                                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                @foreach (var oferta in Model.Ofertas)
+                                {
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@oferta.Id</h5>
+
+                                                <p class="card-text">@oferta.Precio_producto</p>
+                                                <p class="card-text">@oferta.Precio_producto_rebajado</p>
+                                                <p class="card-text">@oferta.Imagen</p>
+                                                <p class="card-text">@oferta.Nombre</p>
+                                                <a href="#" class="btn btn-primary">Oferta</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                            <nav class="products-nav mb-10">
+                                <div class="ps-pagination ">
+
+                                    <div id="pagination">
+                                    </div>
+                                    <div id="page">
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>

@@ -1,0 +1,96 @@
+﻿@model DrugMéxico_Proyecto.Models.OfertasModel
+@{
+    ViewData["Title"] = "Ofertas";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="catalogo-ofertas">
+
+
+    <div class="catalogo-container m-4">
+        <div class="section-header">
+            <div class="section-header-content">
+                <ul class="section-header-list">
+                    <li class="section-header-item">
+                        <a class="home-link">
+                            Home
+                        </a>
+                    </li>
+                    <span class="sepparation">/</span>
+                    <li class="section-header-item">
+                        <a class="here-link">
+                            Ofertas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ps-page--shop tienda-margin" id="shop-sidebar">
+        <div class="catalogo-content-container">
+            <div class="container">
+                <div class="catalogo-row ps-layout--ofertas">
+
+                    <div class="catalogo-content-area ps-layout__right">
+                        <div class="ps-shopping ps-tab-root">
+                            <div class="ps-shopping__header">
+                                <div class="catalogo-toolbar">
+                                    <p><strong>  </strong>Ofertas</p>
+                                    <div class="ps-shopping__actions">
+                                        <select class="ps-select" data-placeholder="Sort Items">
+                                            <option>Ultimos</option>
+                                            <option>Populares</option>
+                                            <option>Mejores</option>
+                                            <option>Precio bajo</option>
+                                            <option>Precio alto</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    @foreach(var cart in Model.Ofertas)
+                                    {
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <img src="/img/Demo/DEMO1.png" class="card-img-top" alt="Imagen del producto">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Nombre producto</h5>
+                                                    <p>@cart.Nombre</p>
+                                                    <p class="card-text">Id Oferta</p>
+                                                    <p>@cart.Id</p>
+                                                    <p class="card-price">$1000</p>
+                                                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                          
+
+                            <nav class="products-nav mb-10">
+                                <div class="ps-pagination ">
+
+                                    <div id="pagination">
+                                    </div>
+                                    <div id="page">
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+

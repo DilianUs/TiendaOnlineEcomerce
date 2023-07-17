@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="author" content="yo merengues">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <title>@ViewData["Title"] - Proyecto</title>
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="~/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="~/fonts/Linearicons/Linearicons/Font/demo-files/demo.css">
+        <link rel="stylesheet" href="~/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/plugins/owl-carousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="~/plugins/owl-carousel/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="~/plugins/slick/slick/slick.css">
+        <link rel="stylesheet" href="~/plugins/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="~/plugins/lightGallery-master/dist/css/lightgallery.min.css">
+        <link rel="stylesheet" href="~/plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+        <link rel="stylesheet" href="~/plugins/select2/dist/css/select2.min.css">
+        <link rel="stylesheet" href="~/css/normalize.css">
+        <link rel="stylesheet" href="~/css/style.css">
+        <link rel="stylesheet" href="~/css/medicine.css">
+        <link rel="stylesheet" href="~/css/general.css">
+        <link rel="stylesheet" href="~/css/sobredrug.css">
+        <link rel="stylesheet" href="~/css/cotizaciones.css">
+        <link rel="stylesheet" href="~/css/preguntasFrecuentes.css">
+        <link rel="stylesheet" href="~/css/tienda.css">
+        <link rel="stylesheet" href="~/css/checkout.css">
+          <link rel="stylesheet" href="~/css/pagos.css">
+            <link rel="stylesheet" href="~/css/account.css">
+            <link rel="stylesheet" href="~/css/carrito.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/5edc3a915f.js" crossorigin="anonymous"></script>
+        <script src="https://resources.openpay.mx/lib/openpay.v1.min.js"></script>
+        <script src="~/js/sessionID.js"></script>
+        <link rel="stylesheet" href="~/css/SignIn.css">
+        
+</head>
+<body >
+    <div id="promotion-header" class="ps-block--promotion-header bg--cover header-promotion">
+        <div class="container" id="promotion-content">
+            <div class="ps-block__left">
+                <h3 class="blue-text">ENVIO GRATIS</h3>
+                <figure>
+                    <p>A PARTIR DE</p>
+                    <h4>$3000</h4>
+
+                </figure>
+            </div>
+            <div class="ps-block__center">
+                <p class="text-design-buy">COMPRA AHORA<span class="blue-text">HASTA 20% DE DESCUENTO</span></p>
+            </div><a class="ps-btn ps-btn--sm button-color" href="#" style="background-color: #5C469C">TIENDA</a>
+            <div id="cerrar-promo" class="cerrar-promo"> <span class="close"><i id="cross" class="icon-cross2" onclick="quitarPromo()"></i></span></div>
+        </div>
+    </div>
+    <header class="header header--standard header--medicine" data-sticky="true">
+
+        <div style="background-color: #AEE2FF;" class="header__content">
+            <div class="ps-container">
+                <div class="header__content-left">
+                    <a class="ps-logo" href="index.html"><img src="~/img/Demo/DEMO1.jpg" class="d-inline-block align-top" alt="" height="70px" ></a>
+                    <div class="menu--product-categories">
+                        <div class="menu__toggle"><i class="icon-menu"></i></div>
+                        <div class="menu__content">
+                            <ul class="menu--dropdown">
+                                <li>
+                                    <a asp-controller="Tienda" asp-action="Shop">Promociones</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Tienda" asp-action="Shop">Nuevo</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Tienda" asp-action="Shop">Mas vendidos</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Tienda" asp-action="Shop">Mejor</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__content-center">
+                    <form class="ps-form--quick-search" action="index.html" method="get">
+
+                        <div class="form-group--icon">
+                            <i class="icon-chevron-down"></i>
+                            <select class="form-control">
+                                <option value="1">Categorías</option>
+                                <option value="1">Smartphone</option>
+                                <option value="1">Audio</option>
+                                <option value="1">Tecnologia</option>
+                            </select>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Buscar en ..." style="width: 440px;">
+                        <button style="background-color: #5C469C">Buscar</button>
+                    </form>
+                </div>
+                <div class="header__content-right">
+                    <div class="header__actions">
+                        <div class="ps-cart--mini">
+                            <a class="header__extra" asp-controller="Usuario" asp-action="Carrito"><i class="icon-bag2"></i><span><i>0</i></span></a>
+                            <div class="ps-cart__content">
+                                <div class="ps-cart__items">
+                                    <div class="ps-product--cart-mobile">
+                                        <div class="ps-product__thumbnail"><a href="#"><img src="~/img/Demo/DEMO2.jpg" alt="" width="60px" height="60px"></a></div>
+                                        <div class="ps-product__content">
+                                            <a class="ps-product__remove" href="#"><i class="icon-cross"></i></a><a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                                            <p><strong>Vendido por:</strong>lorem</p><small>1 x $59.99</small>
+                                        </div>
+                                    </div>
+                                    <div class="ps-product--cart-mobile">
+                                        <div class="ps-product__thumbnail"><a href="#"><img src="~/img/Demo/DEMO2.jpg" alt="" width="60px" height="60px"></a></div>
+                                        <div class="ps-product__content">
+                                            <a class="ps-product__remove" href="#"><i class="icon-cross"></i></a><a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                                            <p><strong>Vendido por:</strong>lorem</p><small>1 x $59.99</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ps-cart__footer">
+                                    <h3>Sub Total:<strong>$59.99</strong></h3>
+                                    <figure><a class="ps-btn" href="#">Ver Carrito</a><a class="ps-btn" href="#">Pagar</a></figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ps-block--user-header">
+                           
+                                    <div class="ps-block__left"><i class="icon-user"></i></div>
+                            <div class="ps-block__right"><a asp-controller="Usuario" asp-action="SignIn">Iniciar Sesión</a><a asp-controller="Usuario" asp-action="SignIn">Crear Cuenta</a></div>
+                               
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navigation">
+            <div class="ps-container">
+                <ul class="menu menu--medicine">
+                    <li class="has-mega-menu">
+                        <a class="menu-text text-design-menu" asp-controller="Home" asp-action="Index">Inicio</a>
+                    </li>
+                    <li class="has-mega-menu">
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Tienda</a>
+                    </li>
+                    <li class="has-mega-menu">
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Deportes</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Audio</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Electronica</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Tecnologia</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Belleza</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Ofertas</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Menudeo</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Tienda" asp-action="Shop">Mayoreo</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Usuario" asp-action="Usuario">Mi Cuenta</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Home" asp-action="Preguntas">Preguntas</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Home" asp-action="Cotizaciones">Cotizaciones</a>
+                    </li>
+                    <li>
+                        <a class="text-design-menu" asp-controller="Home" asp-action="SobreDrug">Sobre Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <header class="header header--mobile header--mobile-medicine" data-sticky="true" >
+        <div class="navigation--mobile" >
+            <div style="background-color: #AEE2FF;" class="navigation__left"><a class="ps-logo" href="index.html"><img src="~/img/Demo/DEMO2.jpg" class="d-inline-block align-top" alt="" width="60px" height="60px"></a></div>
+            <div class="navigation__right">
+                <div class="header__actions">
+                    <div class="ps-cart--mini">
+                        <a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>
+                        <div class="ps-cart__content">
+                            <div class="ps-cart__items">
+                                <div class="ps-product--cart-mobile">
+                                    <div class="ps-product__thumbnail"><a href="#"><img src="~/img/Demo/DEMO2.jpg" alt=""  width="60px" height="60px"/></a></div>
+                                    <div class="ps-product__content">
+                                        <a class="ps-product__remove" href="#"><i class="icon-cross"></i></a><a href="product-default.html">Lorem ipsum dolor sit amet consectetur.</a>
+                                        <p><strong>Vendido por:</strong>LOREM</p><small>1 x $59.99</small>
+                                    </div>
+                                </div>
+                                <div class="ps-product--cart-mobile">
+                                    <div class="ps-product__thumbnail"><a href="#"><img src="~/img/Demo/DEMO2.jpg" alt="" width="60px" height="60px" /></a></div>
+                                    <div class="ps-product__content">
+                                        <a class="ps-product__remove" href="#"><i class="icon-cross"></i></a><a href="product-default.html">Lorem ipsum dolor sit amet consectetur.</a>
+                                        <p><strong>Vendido por:</strong>LOREM</p><small>1 x $59.99</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ps-cart__footer">
+                                <h3>Sub Total:<strong>$59.99</strong></h3>
+                                <figure><a class="ps-btn" href="#">Ver carrito</a><a class="ps-btn" href="checkout.html">Pagar</a></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ps-block--user-header">
+                        <div class="ps-block__left"><a href="my-account.html"><i class="icon-user"></i></a></div>
+                        <div class="ps-block__right"><a href="my-account.html">Iniciar sesion</a><a href="my-account.html">Registrarse</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ps-search--mobile">
+            <form class="ps-form--search-mobile" action="index.html" method="get">
+                <div class="form-group--nest">
+                    <input class="form-control" type="text" placeholder="Buscar..." />
+                    <button><i class="icon-magnifier"></i></button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3" style="background-color: white;">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="ps-footer footer_drug">
+        <div class="container">
+            <div class="ps-footer__widgets">
+                <aside class="widget widget_footer widget_contact-us">
+                    <h4 class="widget-title">Contáctanos</h4>
+                    <div class="widget_content">
+                        <p class="p-text-body">Contáctanos 24/7</p>
+                        <h3 style="color: #0066cc;">345 454 3455</h3>
+                        <h3 style="color: green;">Whatsapp</h3>
+                        <a href="#">ventas@igrtec.com</a>
+                        <br />
+                        <br />
+                        <p class="p-text-body">México - Canadá</p>
+                        <br />
+                        <img class="image_logo_footer2" src="img/Demo/DEMO1.jpg" alt="" width="78" height="78">
+                        <br />
+                        <br />
+                        <h4>Síguenos En Redes</h4>
+                        <ul class="ps-list--social">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside class="widget widget_footer">
+                    <h4 class="widget-title">Empresa México</h4>
+                    <ul class="ps-list--link">
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Aviso de Privacidad</a></li>
+                        <li><a  asp-controller="Home" asp-action="Preguntas">Preguntas Frecuentes</a></li>
+                        <li><a asp-controller="Home" asp-action="SobreDrug">Sobre Nosotros</a></li>
+                    </ul>
+                </aside>
+                <aside class="widget widget_footer">
+                    <h4 class="widget-title">Empresa Global</h4>
+                    <ul class="ps-list--link">
+                        <li><a href="#">Mayoristas</a></li>
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Productos</a></li>
+                    </ul>
+                </aside>
+                <aside class="widget widget_footer">
+                    <h4 class="widget-title">Servicios</h4>
+                    <ul class="ps-list--link">
+                        <li><a href="#">¿Podemos ayudarte?</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Pedidos</a></li>
+                        <li><a href="#">Proveedores</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="ps-footer__copyright">
+                <p class="text_footer">2023 © Empresa México. Todos los derechos reservados</p>
+                <p class="text_footer"><span>Métodos de Pago: </span>
+                <img class="image_logo_footer1" src="https://firebasestorage.googleapis.com/v0/b/appadministrativa-abc60.appspot.com/o/Drugs%2FLogos_Pagos_Drug.png?alt=media&token=0007925d-2b9e-46d9-bf0a-cfcb704664a8" alt="">
+            </div>
+        </div>
+    </footer>
+    <div class="navigation--list">
+        <div class="navigation__content"><a class="navigation__item ps-toggle--sidebar" href="#menu-mobile"><i class="icon-menu"></i><span> Menu</span></a><a class="navigation__item ps-toggle--sidebar" href="#navigation-mobile"><i class="icon-list4"></i><span> Categories</span></a><a class="navigation__item ps-toggle--sidebar" href="#search-sidebar"><i class="icon-magnifier"></i><span> Buscar</span></a><a class="navigation__item ps-toggle--sidebar" href="#cart-mobile"><i class="icon-bag2"></i><span> Carrito</span></a></div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/plugins/jquery.min.js"></script>
+    <script src="~/plugins/nouislider/nouislider.min.js"></script>
+    <script src="~/plugins/popper.min.js"></script>
+    <script src="~/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="~/plugins/masonry.pkgd.min.js"></script>
+    <script src="~/plugins/isotope.pkgd.min.js"></script>
+    <script src="~/plugins/jquery.matchHeight-min.js"></script>
+    <script src="~/plugins/slick/slick/slick.min.js"></script>
+    <script src="~/plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="~/plugins/slick-animation.min.js"></script>
+    <script src="~/plugins/lightGallery-master/dist/js/lightgallery-all.min.js"></script>
+    <script src="~/plugins/sticky-sidebar/dist/sticky-sidebar.min.js"></script>
+    <script src="~/plugins/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/plugins/gmap3.min.js"></script>
+    <!-- custom scripts-->
+    <script src="~/js/main.js"></script>
+    <script src="~/js/animacionPreguntas.js"></script>
+    <script src="~/js/SesionCuentaAnimacion.js"></script>
+    <script src="~/js/tienda.js"></script>
+    <script src="~/js/checkout.js"></script>
+    <script src="~/js/carrito.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿@{
+    ViewData["Title"] = "Pagos";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="pagos">
+    <div class="pagos-container">
+        <div class="datos-transfer">
+            <div class="textos-pagos">
+                <h3>Tu pedido ha sido recibido con éxito. En unos minutos tu Gestor asignado se comunicará contigo 🙂</h3>
+                <p>Realiza tu Pago directo a nuestras cuentas bancarias o realiza tu pago directo en OXXO o en tiendas departamentales.  Una vez realizado, envía tu comprobante al whatsapp 442 245 7154 o al correo ventas@igrtec.com Llama directamente al 442 245 7154</p>
+            </div>
+            <div class="textos-pagos">
+                <h3></h3>
+                <p></p>
+            </div>
+
+            <div class="textos-pagos">
+                <h3>Nuestros detalles bancarios</h3>
+                <h3>Empresa internacional</h3>
+                <p>
+                    Banco: Banamex <br>
+                    Número de cuenta: 00-23-20-30-44-50-63-67-67<br>
+                    Código de clasificación: BNMX<br>
+                    BIC: BNMXMXMMXXX
+                </p>
+            </div>
+            <div class="textos-pagos">
+                <h3>Realiza tu pago en Oxxo:</h3>
+                <p>
+                    Banco: HSBC<br>
+                    Número de cuenta: 4453-4593-5555-5555<br>
+                    Código de clasificación: HSBCMX<br>
+
+                    Número del pedido: 72537<br>
+                    Fecha: abril 6, 2023<br>
+                    Email: @ViewBag.mail<br>
+                    @ViewBag.precio<br>
+                    Método de pago: Transferencia bancaria directa<br>
+                    Realiza tu Pago directo a nuestras cuentas bancarias o realiza tu pago directo en OXXO o en tiendas departamentales.<br>
+                    Una vez realizado, envía tu comprobante al whatsapp 442 245 7154o al correo ventas@igrtec.com<br>
+                    Llama directamente al 442 245 7154
+                </p>
+            </div>
+            <div class="textos-pagos">
+                <h3>Nuestros detalles bancarios</h3>
+                <h3>Empresa internacional:</h3>
+                <p>
+                    Banco: Banamex<br>
+                    Número de cuenta:4453-4593-5555-5555<<br>
+                    Código de clasificación: BNMX<br>
+                    BIC: BNMXMXMMXXX<br>
+                </p>
+            </div>
+            <div class="textos-pagos">
+                <h3>Realiza tu pago en Oxxo:</h3>
+                <p>
+                    Banco: HSBCv
+                    Número de cuenta: 4453-4593-5555-5555<<br>
+                    Código de clasificación: HSBCMX<br>
+                </p>
+            </div>
+        </div>
+        <div class="datos-orden">
+            <div>
+                <h3>Detalles del pedido</h3>
+                <table class="table-pago">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@ViewBag.producto</td>
+                            <td>@ViewBag.precio</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Método de pago:</th>
+                            <td>Transferencia bancaria directa</td>
+                        </tr>
+                        <tr>
+                            <th>Total:</th>
+                            <td>@ViewBag.precio</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+            <div class="textos-pagos">
+                <h3>Dirección de facturación</h3>
+                <p>
+                    @ViewBag.nombre<br>
+                    37 #686g x84 y 86 boulevares de cucel<br>
+                    Merida<br>
+                    Morelos<br>
+                    97314<br>
+                    9993968250<br>
+                    @ViewBag.mail
+                </p>
+            </div>
+            <div class="textos-pagos">
+                <h3>Dirección de envio</h3>
+                <p>
+                    @ViewBag.nombre<br>
+                    37 #686g x84 y 86 boulevares de cucel<br>
+                    Merida<br>
+                    Morelos<br>
+                    97314<br>
+                   
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

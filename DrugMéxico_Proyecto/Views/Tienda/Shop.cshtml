@@ -1,0 +1,488 @@
+﻿@model IEnumerable<DrugMéxico_Proyecto.Models.ProductoModel>
+
+@{
+    ViewData["Title"] = "Shop";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<section class="catalogo">
+    <div class="catalogo-container">
+        <div class="section-header">
+            <div class="section-header-content">
+                <ul class="section-header-list">
+                    <li class="section-header-item">
+                        <a class="home-link">
+                            Home
+                        </a>
+                    </li>
+                    <span class="sepparation">/</span>
+                    <li class="section-header-item">
+                        <a class="here-link">
+                            Tienda
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="ps-page--shop tienda-margin" id="shop-sidebar">
+            <div class="catalogo-content-container">
+                <div class="container">
+                    <div class="catalogo-row ps-layout--shop">
+                        <div class="ps-layout__left">
+                            <aside class="catalogo-sidebar">
+                                <aside class="widget widget_shop">
+                                <h4 class="widget-title">Categorías</h4>
+                                <ul class="ps-list--categories">
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Ropas</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-default.html">Hombres</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Mujeres</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Bolsas</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Lentes</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Accesorios</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Bebes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Cocina</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Electricidad</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item-has-children"><a href="shop-default.html">Aires</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="shop-default.html">Teatro</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="shop-default.html">Autos</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="shop-default.html">Oficina</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="shop-default.html">TV</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop-default.html">4K Ultra HD TVs</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">LED TVs</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">OLED TVs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="shop-default.html">Lavadoras</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                    <li><a href="shop-default.html">lorem</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="shop-default.html">Refrigeradores</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Salud</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Computadores</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-default.html">PC</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Laptop</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Smartphones</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Belleza</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">lorem</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Celulares</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-default.html">Iphone 8</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Iphone X</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Sam Sung Note 8</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Sam Sung S8</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="shop-default.html">Deportes</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="shop-default.html">Lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Lorem</a>
+                                            </li>
+                                            <li><a href="shop-default.html">Lorem</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="shop-default.html">Bebes</a>
+                                    </li>
+                                    <li><a href="shop-default.html">Libros</a>
+                                    </li>
+                                    <li><a href="shop-default.html">Motocicletas</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                                <aside class="widget widget_shop">
+                                <h4 class="widget-title">Marca</h4>
+                                <form class="ps-form--widget-search" action="do_action" method="get">
+                                    <input class="form-control" type="text" placeholder="">
+                                    <button><i class="icon-magnifier"></i></button>
+                                </form>
+                                <figure class="ps-custom-scrollbar" data-height="250">
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-1" name="brand" />
+                                        <label for="brand-1">Adidas (3)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-2" name="brand" />
+                                        <label for="brand-2">Amcrest (1)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-3" name="brand" />
+                                        <label for="brand-3">Apple (2)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-4" name="brand" />
+                                        <label for="brand-4">Asus (19)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-5" name="brand" />
+                                        <label for="brand-5">Baxtex (20)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-6" name="brand" />
+                                        <label for="brand-6">Adidas (11)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-7" name="brand" />
+                                        <label for="brand-7">Casio (9)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-8" name="brand" />
+                                        <label for="brand-8">Electrolux (0)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-9" name="brand" />
+                                        <label for="brand-9">Gallaxy (0)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-10" name="brand" />
+                                        <label for="brand-10">Samsung (0)</label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="brand-11" name="brand" />
+                                        <label for="brand-11">Sony (0)</label>
+                                    </div>
+                                </figure>
+                                <figure>
+                                    <h4 class="widget-title">Precio</h4>
+                                    <div id="nonlinear"></div>
+                                    <p class="ps-slider__meta">Price:<span class="ps-slider__value">$<span class="ps-slider__min"></span></span>-<span class="ps-slider__value">$<span class="ps-slider__max"></span></span></p>
+                                </figure>
+                                <figure>
+                                    <h4 class="widget-title">Precio</h4>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="review-1" name="review">
+                                        <label for="review-1"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i></span><small>(13)</small></label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="review-2" name="review">
+                                        <label for="review-2"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i></span><small>(13)</small></label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="review-3" name="review">
+                                        <label for="review-3"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(5)</small></label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="review-4" name="review">
+                                        <label for="review-4"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(5)</small></label>
+                                    </div>
+                                    <div class="ps-checkbox">
+                                        <input class="form-control" type="checkbox" id="review-5" name="review">
+                                        <label for="review-5"><span><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(1)</small></label>
+                                    </div>
+                                </figure>
+                                <figure>
+                                    <h4 class="widget-title">Color</h4>
+                                    <div class="ps-checkbox ps-checkbox--color color-1 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-1" name="size" />
+                                        <label for="color-1"></label>
+                                    </div>
+                                    <div class="ps-checkbox ps-checkbox--color color-2 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-2" name="size" />
+                                        <label for="color-2"></label>
+                                    </div>
+                                    <div class="ps-checkbox ps-checkbox--color color-3 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-3" name="size" />
+                                        <label for="color-3"></label>
+                                    </div>
+                                    <div class="ps-checkbox ps-checkbox--color color-4 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-4" name="size" />
+                                        <label for="color-4"></label>
+                                    </div>
+                                    <div class="ps-checkbox ps-checkbox--color color-5 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-5" name="size" />
+                                        <label for="color-5"></label>
+                                    </div>
+                                    <div class="ps-checkbox ps-checkbox--color color-6 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-6" name="size" />
+                                        <label for="color-6"></label>
+                                    </div>
+                                    <div class="ps-checkbox ps-checkbox--color color-7 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-7" name="size" />
+                                        <label for="color-7"></label>
+                                    </div>
+                                    <div class="ps-checkbox ps-checkbox--color color-8 ps-checkbox--inline">
+                                        <input class="form-control" type="checkbox" id="color-8" name="size" />
+                                        <label for="color-8"></label>
+                                    </div>
+                                </figure>
+                                <figure class="sizes">
+                                    <h4 class="widget-title">Tamano</h4><a href="#">L</a><a href="#">M</a><a href="#">S</a><a href="#">XL</a>
+                                </figure>
+                            </aside>
+                            </aside>
+                        </div>
+
+                        <div class="catalogo-content-area ps-layout__right">
+                            <div class="ps-shopping ps-tab-root">
+                                    <div class="ps-shopping__header">
+                                        <div class="catalogo-toolbar">
+                                             <p><strong>  </strong>Productos encontrados</p>
+                                             <br> <br>
+                                            <div class="ps-shopping__actions">
+                                                
+                                                <select class="ps-select" data-placeholder="Sort Items">
+                                                    <option>Ultimos</option>
+                                                    <option>Populares</option>
+                                                    <option>Mejores</option>
+                                                    <option>Precio najo</option>
+                                                    <option>Precio alto</option>
+                                                </select>
+                                                <br> <br>
+                                                <div class="ps-shopping__view " style="align-items: center;">
+                                                    <p>Vista</p>
+                                                    <br>
+                                                    <ul class="ps-tab-list">
+                                                        <li class="active"><a href="#tab-1"><i class="icon-grid"></i></a></li>
+                                                        <li><a href="#tab-2"><i class="icon-list4"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                       
+                                    <div class="catalogo-empty-space"> @ViewBag.aviso</div>
+                                    <div class="ps-tabs">
+                                         <div class="ps-tab active catalogo-productos-content" id="tab-1">
+                                            <div class="ps-shopping-product">
+                                                <div class="row" id="cuerpo-productos">
+                                                @{
+                                                    for (int i = 0; i < 50; i++)
+                                                    {
+                                                        <div class="col-md-4 mb-4">
+                                                            <div class="ps-product card">
+                                                                <div class="ps-product__thumbnail card-body">
+                                                                    <p>@i</p>
+                                                                    <a asp-route-id="@i" asp-controller="Tienda" asp-action="ProductoDetalle"><img src="~/img/Demo/DEMO9.jpg" alt="" /></a>
+                                                                    <ul class="ps-product__actions">
+                                                                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                                                                        <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                                                                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="ps-product__container">
+                                                                    <a class="ps-product__vendor" href="#">Marca</a>
+                                                                    <div class="ps-product__content">
+                                                                        <a class="ps-product__title" href="product-default.html">Nombre del producto</a>
+                                                                        <p class="ps-product__price">Precio</p>
+                                                                    </div>
+                                                                    <div class="ps-product__content hover">
+                                                                        <a class="ps-product__title" href="product-default.html">Nombre del producto</a>
+                                                                        <p class="ps-product__price">Precio normal</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                }
+
+                                                </div>   
+                                            </div>
+                       
+                                            <nav class="products-nav">
+                                                     <div class="ps-pagination">
+                                                      
+                                                        <div id="pagination">
+                                                                
+                                                        </div>
+                                                        <div id="page"></div>
+                                                    </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+            
+    </div>
+    
+</section>
+
+@*<script>
+    var currentPage = 1;
+    var totalPages = 185;
+    function showButtons() {
+        var pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+        pagination.appendChild(createButton("Anterior", prevPage));
+        for (var i = currentPage; i < currentPage + 5 && i <= totalPages; i++) {
+            pagination.appendChild(createButton(i, setPage));
+        }
+        pagination.appendChild(createButton("Siguiente", nextPage));
+    }
+    function createButton(text, onclick) {
+        var button = document.createElement("button");
+        button.innerHTML = text;
+        button.onclick = onclick;   
+        return button;
+    }
+    async function setPage() {
+        currentPage = parseInt(this.innerHTML);
+        showButtons();
+        showPage();
+
+        console.log("hola soy" + currentPage);
+        var data = { pag: 2 };
+        $.ajax({
+            url: "/Tienda/Shop",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+            }
+        });
+
+    }
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showButtons();
+            showPage();
+        }
+    }
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            showButtons();
+            showPage();
+        }
+    }
+    function showPage() {
+        var page = document.getElementById("page");
+        page.innerHTML = "Página " + currentPage;
+
+
+            
+
+    }
+
+
+    showButtons();
+    showPage();
+</script>*@
+
+@*
+<script>
+
+    function pantallaPago(url) {
+        window.open(url);
+    }
+</script>*@
